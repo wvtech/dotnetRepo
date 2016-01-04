@@ -1,33 +1,4 @@
-﻿//app.directive('uniqueUsername', function (Hippa_RegistrationService) {
-   
-//    return {
-//        restrict: "A",
-//        require: 'ngModel',
-//        link: function (scope, ele, attrs, ctrl) {
-//            //  ele.bind('blur', function () {
-//            ctrl.$parsers.push(function () {
-//                  var Username = ele.val(); ctrl.$setValidity('isDuplicateUsername', true);
-//                // Checking to see if the email has been already registered                  
-//                var checkunique = Hippa_RegistrationService.checkuniqueuser(Username);
-//                checkunique.then(function (data) {                  
-//                    if (data.data > 0) {
-//                        alert(data.data);
-//                        ctrl.$setValidity('isDuplicateUsername', false );
-//                            alert("User Name already exist");                          
-//                        }
-//                    else {
-//                        alert('No-duplicate');
-//                        ctrl.$setValidity('isDuplicateUsername', true);
-//                    }
-                   
-
-//                }, function (error) {
-
-//                });
-//            })
-//        }
-//    }
-//});
+﻿
 
 app.directive('uniqueUsername', function ($http, $timeout) { // available
     return {
@@ -47,7 +18,7 @@ app.directive('uniqueUsername', function ($http, $timeout) { // available
 
                     // now do your thing, chicken wing.
                     if (viewValue !== "" && typeof viewValue !== "undefined") {
-                        $http.get('http://localhost:49291' + '/api/Hippa_Registration/checkuniqueuser?username=' + viewValue)
+                        $http.get('http://localhost:49291' + '/api/Registration/checkuniqueuser?username=' + viewValue)
                             .success(function (data, status, headers, config) {
                                 alert(data + 'data.data')
                                 if (data > 0) {                                  

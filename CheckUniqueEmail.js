@@ -1,34 +1,4 @@
-﻿//app.directive('uniqueEmail', function (Hippa_RegistrationService) {
-//    return {
-//        restrict: "A",
-//        require: 'ngModel',
-//        priority: '0',
-//        link: function (scope, ele, attrs, ngModel) {
-
-//            ele.bind('blur', function (){          
-//                var e = ele.val(); //alert(valueE + 'valueE');
-//                // Checking to see if the email has been already registered                     
-//                var checkuniqueEmail = Hippa_RegistrationService.checkuniqueEmail(e);
-//                checkuniqueEmail.then(function (data) {
-//                    document.getElementById("Email").value = e;
-//                    if (data.data > 0) {
-//                        var r = confirm("The EmailId which you have entered is already associated with HIPAAtrek so their existing account will be  associated with your organization.'\n'Do you want to continue!");
-//                        if (r == true) {                           
-//                            ngModel.$setValidity('isDuplicatedEmail', true);
-//                            return ele.val();
-//                        } else {
-//                            ngModel.$setValidity('isDuplicatedEmail', false);    
-//                        }
-//                    }
-//                    else {
-//                        ngModel.$setValidity('isDuplicatedEmail', true);      
-//                    }
-//                }, function (error) {
-//                });
-//            });
-//        }
-//    };
-//})
+﻿
 app.directive('uniqueEmail', function ($http, $timeout) { // available
     return {
         require: 'ngModel',
@@ -47,11 +17,11 @@ app.directive('uniqueEmail', function ($http, $timeout) { // available
 
                     // now do your thing, chicken wing.
                     if (viewValue !== "" && typeof viewValue !== "undefined") {
-                        $http.get('http://localhost:49291' + '/api/Hippa_Registration/checkuniqueEmail?emailid=' + viewValue)
+                        $http.get('http://localhost:49291' + '/api/Registration/checkuniqueEmail?emailid=' + viewValue)
                             .success(function (data, status, headers, config) {
                                 alert(data+ 'data.data');
                                 if (data > 0) {                                 
-                                    var r = confirm("The EmailId which you have entered is already associated with HIPAAtrek so their existing account will be  associated with your organization.'\n'Do you want to continue!");
+                                    var r = confirm("The EmailId which you have entered is already associated with Us so their existing account will be  associated with your organization.'\n'Do you want to continue!");
                                     if (r == true) {
                                         ctrl.$setValidity('isDuplicatedEmail', true);
                                         ctrl.$setValidity('checkingEmail', true);                                       
