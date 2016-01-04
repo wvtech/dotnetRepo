@@ -1,50 +1,31 @@
-﻿
-
-app.directive('uniqueUsername', function ($http, $timeout) { // available
+﻿App.directive('uniqueUsername', function ($http, GetURL_Services) {
     return {
+        restrict: 'A',
         require: 'ngModel',
-        link: function (scope, elem, attr, ctrl) {
-            console.log(ctrl);
-            // push the validator on so it runs last.
-            ctrl.$parsers.push(function (viewValue) {
-                // set it to true here, otherwise it will not 
-                // clear out when previous validators fail.
-                ctrl.$setValidity('emailAvailable', true);
-                if (ctrl.$valid) {
-                    // set it to false here, because if we need to check 
-                    // the validity of the email, it's invalid until the 
-                    // AJAX responds.
-                    ctrl.$setValidity('checkingEmail', false);
+        link: function (scope, element, attrs, ngModel) {
+            element.bind('blur', function (e) {
 
-                    // now do your thing, chicken wing.
-                    if (viewValue !== "" && typeof viewValue !== "undefined") {
-                        $http.get('http://localhost:49291' + '/api/Registration/checkuniqueuser?username=' + viewValue)
-                            .success(function (data, status, headers, config) {
-                                alert(data + 'data.data')
-                                if (data > 0) {                                  
-                                    alert("User Name already exist");
-                                    ctrl.$setValidity('isDuplicateUsername', false);
-                                    ctrl.$setValidity('checkingEmail', false);
-                                }
-                                else {
-                                    alert("User Name not exist");
-                                    ctrl.$setValidity('isDuplicateUsername', true);
-                                    ctrl.$setValidity('checkingEmail', true);
-                                }
-                            })
-                            .error(function (data, status, headers, config) {
-                                alert("error");
-                                ctrl.$setValidity('isDuplicateUsername', false);
-                                ctrl.$setValidity('checkingEmail', true);
-                            });
-                    } else {
-                        ctrl.$setValidity('isDuplicateUsername', false);
-                        ctrl.$setValidity('checkingEmail', true);
-                    }
+                var data = {
+                    "User_UserName": element.val()
                 }
-                return viewValue;
-            });
+                var custUrl = GetURL_Services.api_Url();
+                $http({
+                    method: "Post",
+                    url: custUrl + '/api/Organization/CheckUniqueUserName/',
+                    data: JSON.stringify(data)
+                }).success(function (data) {
 
+                    if (data.Response == 0) {
+                        ngModel.$setValidity('isDuplicateUsername', false);
+                        //alert(data.Response + 'false');
+                    } else {
+                        ngModel.$setValidity('isDuplicateUsername', true);
+                        //alert(data.Response + 'true');
+                    }
+
+                });
+
+            });
         }
     };
-});
+})

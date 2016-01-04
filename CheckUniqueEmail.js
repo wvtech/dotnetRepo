@@ -1,54 +1,34 @@
 ﻿
-app.directive('uniqueEmail', function ($http, $timeout) { // available
+App.directive('uniqueEmail', function ($http, GetURL_Services) {
     return {
+        restrict: 'A',
         require: 'ngModel',
-        link: function (scope, elem, attr, ctrl) {
-            console.log(ctrl);
-            // push the validator on so it runs last.
-            ctrl.$parsers.push(function (viewValue) {
-                // set it to true here, otherwise it will not 
-                // clear out when previous validators fail.
-                ctrl.$setValidity('isDuplicatedEmail', true);
-                if (ctrl.$valid) {
-                    // set it to false here, because if we need to check 
-                    // the validity of the email, it's invalid until the 
-                    // AJAX responds.
-                    ctrl.$setValidity('checkingEmail', false);
+        link: function (scope, element, attrs, ngModel) {
+            element.bind('blur', function (e) {
 
-                    // now do your thing, chicken wing.
-                    if (viewValue !== "" && typeof viewValue !== "undefined") {
-                        $http.get('http://localhost:49291' + '/api/Registration/checkuniqueEmail?emailid=' + viewValue)
-                            .success(function (data, status, headers, config) {
-                                alert(data+ 'data.data');
-                                if (data > 0) {                                 
-                                    var r = confirm("The EmailId which you have entered is already associated with Us so their existing account will be  associated with your organization.'\n'Do you want to continue!");
-                                    if (r == true) {
-                                        ctrl.$setValidity('isDuplicatedEmail', true);
-                                        ctrl.$setValidity('checkingEmail', true);                                       
-                                       
-                                    } else {
-                                        ctrl.$setValidity('isDuplicatedEmail', false);
-                                        ctrl.$setValidity('checkingEmail', false);
-                                    }
-                                   
-                                }
-
-                            })
-                            .error(function (data, status, headers, config) {
-                                alert('error');
-                                ctrl.$setValidity('isDuplicatedEmail', false);
-                                ctrl.$setValidity('checkingEmail', true);
-                            });
-                    } else {
-                        alert('undefined Email');
-                        ctrl.$setValidity('isDuplicatedEmail', false);
-                        ctrl.$setValidity('checkingEmail', true);
-                    }
+                var data = {
+                    "User_EmailId": element.val()
                 }
-                return viewValue;
-            });
+                var custUrl = GetURL_Services.api_Url();
+                $http({
+                    method: "Post",
+                    url: custUrl + '/api/Organization/CheckUniqueEmailAddress/',
+                    data: JSON.stringify(data)
+                }).success(function (data) {
 
+                    if (data.Response == 0) {
+                        ngModel.$setValidity('isDuplicatedEmail', false);
+                        //alert(data.Response + 'false');
+                    } else {
+                        ngModel.$setValidity('isDuplicatedEmail', true);
+                        //alert(data.Response + 'true');
+                    }
+
+                });
+
+            });
         }
     };
-});
+})
+
 
