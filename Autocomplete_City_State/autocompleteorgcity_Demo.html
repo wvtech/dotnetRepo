@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body><div data-ng-controller="Registration">
+    <form name="UpdateUser">
+        <div class="form-group topGap-25">
+            <span class="control-label">Organization State</span>
+            <div class="main">
+                <autocompleteorgstate ng-model="CurrentUser.OrgState" name="State" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates" required></autocompleteorgstate>
+            </div>
+            <span style="color:red" ng-show="UpdateUser.State.$dirty && UpdateUser.State.$invalid">State is required.</span>
+        </div>
+
+        <div class="form-group topGap-25">
+            <span class="control-label">Organization City</span>
+            <div class="main">
+                <autocompleteorgcity ng-model="CurrentUser.OrgCity" name="City" attr-placeholder="type to search Cities..." click-activation="true" data="Cities" on-type="updateCities" required></autocompleteorgcity>
+
+            </div>
+            <span style="color:red" ng-show="UpdateUser.City.$dirty && UpdateUser.City.$invalid">City is required.</span>
+        </div>
+        <div class="form-group">
+
+            <div class="topGap-10">
+                <input type="submit" name="singlebutton" class="btn btn-primary" ng-click="GetValues()" value="Update" />
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+    (function () {
+        'use strict';
+
+
+        App.controller('Registration', Registration);
+
+        Registration.$inject = ['$location', '$rootScope', '$scope',  'CityService', 'StateService'];
+        function Registration($location, $rootScope, $scope,  CityService, StateService ) {
+
+            $scope.updateCities = function (typed) {
+
+                var data = { "CityName": typed };
+                $scope.newCity = CityService.AutoCompleteCity(data);
+                // This service call will return list of object of City type which has Properties as 'CityId' and  'CityName'
+                $scope.newCity.then(function (data) {
+                    $scope.Cities = data.data;
+                    // This list of 'Cities' will populate in <autocompleteorgcity> in our view.
+                });
+            }
+
+            $scope.updateStates = function (typed) {
+
+                var data = { "StateName": typed };
+                $scope.newState = StateService.AutoCompleteState(data);
+                // This service call will return list of object of State type which has Properties as 'StateId' and  'StateName'
+                $scope.newState.then(function (data) {
+                    $scope.States = data.data;
+                    // This list of 'States' will populate in <autocompleteorgstate> in our view.
+
+                });
+            }
+
+            // Function to show the selected values in console.
+
+            $scope.GetValues = function () {
+                if ($rootScope.selectedorgcity) {
+                    console.log($rootScope.selectedorgcity.CityId);
+                    console.log($rootScope.selectedorgcity.CityName);
+                    // Here CityId and CityName will be attributes of object list return by service call in  '$scope.updateCities' function
+                }
+                if ($rootScope.selectedorgstate) {
+                    // Here StateId and StateName will be attributes of object list return by service call in  '$scope.updateStates' function
+                    console.log($rootScope.selectedorgstate.StateId);
+                    console.log($rootScope.selectedorgstate.StateName);
+                }
+            }
+
+        }
+
+    })();
+</script>
