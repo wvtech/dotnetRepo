@@ -1,0 +1,23 @@
+﻿@Model TransitExec.Models.DriverList;
+    @{
+        var columns1 = new[] { "UserName", "LoginTime" };
+        var grid1 = new WebGrid(Model.driverlist, columnNames: columns1, rowsPerPage: 25, ajaxUpdateContainerId: "grid", canSort: true);
+
+    }
+    @if (Model.driverlist != null)
+    {
+        @grid1.GetHtml(
+        htmlAttributes: new { id = "grid" },
+        tableStyle: "table table-bordered datatable",
+        alternatingRowStyle: "alternate",
+        headerStyle: "header",
+        columns: grid1.Columns(
+        grid1.Column("UserName", "UserName"),
+        grid1.Column("LoginTime", "LoginTime")
+))
+    }
+    else
+    {
+        <p>No Template Record Found!</p>
+    }
+    <a href="#addunit" id="clickme" data-toggle="modal"></a>
