@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="TransitApp.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5.8.4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModelClasses/VehicleList.cs">
+    <Files>
+      <File FileName="Main.cs" Line="1" Column="1" />
+      <File FileName="ScheduleController.cs" Line="30" Column="28" />
+      <File FileName="AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Data/CallingAPI.cs" Line="90" Column="1" />
+      <File FileName="Models/LocationManager.cs" Line="1" Column="1" />
+      <File FileName="ModelClasses/VehicleList.cs" Line="44" Column="1" />
+      <File FileName="ViewController.cs" Line="112" Column="1" />
+      <File FileName="AudioCallingController.cs" Line="160" Column="37" />
+      <File FileName="ModelClasses/UserProfile.cs" Line="19" Column="43" />
+      <File FileName="Models/UserDetail.cs" Line="28" Column="2" />
+      <File FileName="ModelClasses/ReportStatus.cs" Line="89" Column="28" />
+      <File FileName="ModelClasses/DriverSchedule.cs" Line="22" Column="43" />
+      <File FileName="DriverListController.cs" Line="83" Column="30" />
+      <File FileName="Models/Schedule.cs" Line="65" Column="16" />
+      <File FileName="CustomCell/CustomCellDrivers.cs" Line="53" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

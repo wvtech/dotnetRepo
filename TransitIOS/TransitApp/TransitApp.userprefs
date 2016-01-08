@@ -1,0 +1,38 @@
+﻿<Properties StartupItem="iOS/TransitApp.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.4" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="iOS/ScheduleController.cs" Line="255" Column="5" />
+      <File FileName="iOS/LoadScheduleViewController.cs" Line="1" Column="1" />
+      <File FileName="iOS/ModelClasses/FuleReport.cs" Line="1" Column="1" />
+      <File FileName="iOS/Data/CallingAPI.cs" Line="296" Column="15" />
+      <File FileName="iOS/ModelClasses/ScheduleDetail.cs" Line="1" Column="1" />
+      <File FileName="iOS/ViewController.cs" Line="162" Column="66" />
+      <File FileName="iOS/CustomCell/CustomCellDrivers.cs" Line="1" Column="1" />
+      <File FileName="iOS/DriverListController.cs" Line="1" Column="1" />
+      <File FileName="iOS/CustomCell/CustomCellSchedule.cs" Line="1" Column="1" />
+      <File FileName="iOS/CustomCell/CustomCellSchedule.designer.cs" Line="1" Column="1" />
+      <File FileName="iOS/Models/LocationManager.cs" Line="23" Column="59" />
+      <File FileName="iOS/ModelClasses/VehicleList.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="16" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TransitApp" expanded="True">
+            <Node name="TransitApp.iOS" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="ModelClasses" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewController.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

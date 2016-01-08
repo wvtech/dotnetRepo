@@ -1,0 +1,158 @@
+2015-10-12 20:34:45.670 TransitAppiOS[668:9491] remoteHostStatus:2
+2015-10-12 20:34:45.670 TransitAppiOS[668:9491] internetStatus:2
+2015-10-12 20:34:45.671 TransitAppiOS[668:9491] 1
+2015-10-12 20:34:45.671 TransitAppiOS[668:9491] localWifiStatus:1
+2015-10-12 20:34:45.671 TransitAppiOS[668:9491] Network Avaible
+2015-10-12 20:34:45.707 TransitAppiOS[668:9491] Error loading /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib:  dlopen(/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib, 262): no suitable image found.  Did find:
+	/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib: mach-o, but not built for iOS simulator
+2015-10-12 20:34:45.707 TransitAppiOS[668:9491] Cannot find function pointer IOHIDLibFactory for factory 13AA9C44-6F1B-11D4-907C-0005028F18D5 in CFBundle/CFPlugIn 0x79d67850 </System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin> (bundle, not loaded)
+2015-10-12 20:34:45.708 TransitAppiOS[668:9491] Error loading /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib:  dlopen(/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib, 262): no suitable image found.  Did find:
+	/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib: mach-o, but not built for iOS simulator
+2015-10-12 20:34:45.708 TransitAppiOS[668:9491] Cannot find function pointer IOHIDLibFactory for factory 13AA9C44-6F1B-11D4-907C-0005028F18D5 in CFBundle/CFPlugIn 0x79d67850 </System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin> (bundle, not loaded)
+2015-10-12 20:34:45.708 TransitAppiOS[668:9491] Error loading /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib:  dlopen(/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib, 262): no suitable image found.  Did find:
+	/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib: mach-o, but not built for iOS simulator
+2015-10-12 20:34:45.709 TransitAppiOS[668:9491] Cannot find function pointer IOHIDLibFactory for factory 13AA9C44-6F1B-11D4-907C-0005028F18D5 in CFBundle/CFPlugIn 0x79d67850 </System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin> (bundle, not loaded)
+2015-10-12 20:34:45.709 TransitAppiOS[668:9491] Error loading /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib:  dlopen(/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib, 262): no suitable image found.  Did find:
+	/System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib: mach-o, but not built for iOS simulator
+2015-10-12 20:34:45.709 TransitAppiOS[668:9491] Cannot find function pointer IOHIDLibFactory for factory 13AA9C44-6F1B-11D4-907C-0005028F18D5 in CFBundle/CFPlugIn 0x79d67850 </System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin> (bundle, not loaded)
+2015-10-12 20:34:45.926 TransitAppiOS[668:9491] App is becoming active
+2015-10-12 20:34:47.740 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:47.740 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:47.740 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:47.740 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:47.741 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:47.741 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:48.018 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:48.480 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:48.480 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:48.480 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:48.480 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:48.480 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:48.481 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:49.506 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:50.488 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:51.484 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:52.486 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:52.486 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:52.487 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:52.487 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:52.487 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:52.487 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:53.490 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:53.491 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:53.491 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:53.491 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:53.491 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:53.491 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:54.495 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:54.495 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:54.495 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:54.495 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:54.496 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:54.496 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:55.499 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:55.499 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:55.500 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:55.500 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:55.500 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:55.500 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:56.502 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:57.506 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:58.514 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:58.515 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:58.515 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:58.515 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:58.515 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:58.515 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:34:59.514 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:34:59.515 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:34:59.515 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:34:59.515 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:59.515 TransitAppiOS[668:9491] -1
+2015-10-12 20:34:59.515 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:01.212 TransitAppiOS[668:9491] 
+2015-10-12 20:35:02.418 TransitAppiOS[668:9491] 1
+2015-10-12 20:35:02.879 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:02.879 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:02.880 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:02.880 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:02.880 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:02.880 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.169 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:03.445 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:03.445 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:03.445 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:03.446 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.446 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.446 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:03.727 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:03.727 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:03.727 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:03.727 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.727 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:03.728 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:04.538 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:05.541 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:05.541 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:05.542 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:05.542 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:05.542 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:05.542 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:06.548 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:06.548 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:06.549 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:06.549 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:06.549 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:06.549 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:07.547 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:07.547 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:07.547 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:07.547 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:07.547 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:07.548 TransitAppiOS[668:9491] foreground updated
+2015-10-12 20:35:08.552 TransitAppiOS[668:9491] 0 meters
+2015-10-12 20:35:08.552 TransitAppiOS[668:9491] -122.406417
+2015-10-12 20:35:08.552 TransitAppiOS[668:9491] 37.785834
+2015-10-12 20:35:08.552 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:08.552 TransitAppiOS[668:9491] -1
+2015-10-12 20:35:08.553 TransitAppiOS[668:9491] foreground updated
