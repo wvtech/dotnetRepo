@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TransitExecModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TransitExecModelStoreContainer">
+          <EntitySet Name="tblDriverSchedule" EntityType="TransitExecModel.Store.tblDriverSchedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLoginTable" EntityType="TransitExecModel.Store.tblLoginTable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblScheduleDetail" EntityType="TransitExecModel.Store.tblScheduleDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblVehiclesDetail" EntityType="TransitExecModel.Store.tblVehiclesDetail" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tblDriverSchedule">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="VehicleId" />
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="VehicleId" Type="int" Nullable="false" />
+          <Property Name="ScheduleId" Type="int" Nullable="false" />
+          <Property Name="ScheduleDate" Type="datetime" />
+          <Property Name="DepatureDateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="AppointmentDateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="PickupLongitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="PickupLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="DropLongilude" Type="nvarchar" MaxLength="50" />
+          <Property Name="DropLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="StatusDetail" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tblLoginTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageURl" Type="nvarchar(max)" />
+          <Property Name="UserType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblScheduleDetail">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="HomeNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ScheduleTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="AppointmentTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="BrokerAuth" Type="nvarchar" MaxLength="50" />
+          <Property Name="BrokerMileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyMileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="DispatchNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ScheduleDate" Type="datetime" />
+          <Property Name="DepatureDateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="AppointmentDateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="PickupLongitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="PickupLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="DropLongilude" Type="nvarchar" MaxLength="50" />
+          <Property Name="DropLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="StatusType" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusDetail" Type="nvarchar(max)" />
+          <Property Name="ODO" Type="float" />
+          <Property Name="Time" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fare" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tickets" Type="nvarchar" MaxLength="50" />
+          <Property Name="Signature" Type="image" />
+        </EntityType>
+        <EntityType Name="tblVehiclesDetail">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VehicleNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastLongitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastLatitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentLongitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentLatitude" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TransitExecModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TransitExecEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDriverSchedules" EntityType="TransitExecModel.tblDriverSchedule" />
+          <EntitySet Name="tblLoginTables" EntityType="TransitExecModel.tblLoginTable" />
+          <EntitySet Name="tblScheduleDetails" EntityType="TransitExecModel.tblScheduleDetail" />
+          <EntitySet Name="tblVehiclesDetails" EntityType="TransitExecModel.tblVehiclesDetail" />
+        </EntityContainer>
+        <EntityType Name="tblDriverSchedule">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="VehicleId" />
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="VehicleId" Type="Int32" Nullable="false" />
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" />
+          <Property Name="ScheduleDate" Type="DateTime" Precision="3" />
+          <Property Name="DepatureDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AppointmentDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PickupLongitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PickupLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DropLongilude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DropLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="StatusDetail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblLoginTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ImageURl" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UserType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblScheduleDetail">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="HomeNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ScheduleTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AppointmentTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BrokerAuth" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BrokerMileage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyMileage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DispatchNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ScheduleDate" Type="DateTime" Precision="3" />
+          <Property Name="DepatureDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AppointmentDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PickupLongitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PickupLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DropLongilude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DropLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="StatusType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StatusDetail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ODO" Type="Double" />
+          <Property Name="Time" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Amount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Fare" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Note" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Tickets" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Signature" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblVehiclesDetail">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="VehicleNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastLongitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentLongitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentLatitude" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TransitExecModelStoreContainer" CdmEntityContainer="TransitExecEntities">
+          <EntitySetMapping Name="tblDriverSchedules">
+            <EntityTypeMapping TypeName="TransitExecModel.tblDriverSchedule">
+              <MappingFragment StoreEntitySet="tblDriverSchedule">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+                <ScalarProperty Name="DepatureDateTime" ColumnName="DepatureDateTime" />
+                <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+                <ScalarProperty Name="PickupLongitude" ColumnName="PickupLongitude" />
+                <ScalarProperty Name="PickupLatitude" ColumnName="PickupLatitude" />
+                <ScalarProperty Name="DropLongilude" ColumnName="DropLongilude" />
+                <ScalarProperty Name="DropLatitude" ColumnName="DropLatitude" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusDetail" ColumnName="StatusDetail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLoginTables">
+            <EntityTypeMapping TypeName="TransitExecModel.tblLoginTable">
+              <MappingFragment StoreEntitySet="tblLoginTable">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ImageURl" ColumnName="ImageURl" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblScheduleDetails">
+            <EntityTypeMapping TypeName="TransitExecModel.tblScheduleDetail">
+              <MappingFragment StoreEntitySet="tblScheduleDetail">
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="HomeNumber" ColumnName="HomeNumber" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="ScheduleTime" ColumnName="ScheduleTime" />
+                <ScalarProperty Name="AppointmentTime" ColumnName="AppointmentTime" />
+                <ScalarProperty Name="BrokerAuth" ColumnName="BrokerAuth" />
+                <ScalarProperty Name="BrokerMileage" ColumnName="BrokerMileage" />
+                <ScalarProperty Name="CompanyMileage" ColumnName="CompanyMileage" />
+                <ScalarProperty Name="DispatchNumber" ColumnName="DispatchNumber" />
+                <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+                <ScalarProperty Name="DepatureDateTime" ColumnName="DepatureDateTime" />
+                <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+                <ScalarProperty Name="PickupLongitude" ColumnName="PickupLongitude" />
+                <ScalarProperty Name="PickupLatitude" ColumnName="PickupLatitude" />
+                <ScalarProperty Name="DropLongilude" ColumnName="DropLongilude" />
+                <ScalarProperty Name="DropLatitude" ColumnName="DropLatitude" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusType" ColumnName="StatusType" />
+                <ScalarProperty Name="StatusDetail" ColumnName="StatusDetail" />
+                <ScalarProperty Name="ODO" ColumnName="ODO" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Fare" ColumnName="Fare" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Tickets" ColumnName="Tickets" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVehiclesDetails">
+            <EntityTypeMapping TypeName="TransitExecModel.tblVehiclesDetail">
+              <MappingFragment StoreEntitySet="tblVehiclesDetail">
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+                <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+                <ScalarProperty Name="LastLongitude" ColumnName="LastLongitude" />
+                <ScalarProperty Name="LastLatitude" ColumnName="LastLatitude" />
+                <ScalarProperty Name="CurrentLongitude" ColumnName="CurrentLongitude" />
+                <ScalarProperty Name="CurrentLatitude" ColumnName="CurrentLatitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

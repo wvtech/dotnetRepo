@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectTrackingDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ProjectTrackingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="ProjectTrackingDBModel.Employee" />
+    <EntitySet Name="ManagerCommunications" EntityType="ProjectTrackingDBModel.ManagerCommunication" />
+    <EntitySet Name="Projects" EntityType="ProjectTrackingDBModel.Project" />
+    <EntitySet Name="ProjectTasks" EntityType="ProjectTrackingDBModel.ProjectTask" />
+    <EntitySet Name="UserStories" EntityType="ProjectTrackingDBModel.UserStory" />
+    <AssociationSet Name="FK_ManagerCommunication_ProjectTask" Association="ProjectTrackingDBModel.FK_ManagerCommunication_ProjectTask">
+      <End Role="ProjectTask" EntitySet="ProjectTasks" />
+      <End Role="ManagerCommunication" EntitySet="ManagerCommunications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserStory_Project" Association="ProjectTrackingDBModel.FK_UserStory_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="UserStory" EntitySet="UserStories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTask_UserStory" Association="ProjectTrackingDBModel.FK_ProjectTask_UserStory">
+      <End Role="UserStory" EntitySet="UserStories" />
+      <End Role="ProjectTask" EntitySet="ProjectTasks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ManagerId" Type="Int32" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SkillSets" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ManagerCommunication">
+    <Key>
+      <PropertyRef Name="ManagerCommunicationId" />
+    </Key>
+    <Property Name="ManagerCommunicationId" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectTaskId" Type="Int32" />
+    <NavigationProperty Name="ProjectTask" Relationship="ProjectTrackingDBModel.FK_ManagerCommunication_ProjectTask" FromRole="ManagerCommunication" ToRole="ProjectTask" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="Projectname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="ClientName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserStories" Relationship="ProjectTrackingDBModel.FK_UserStory_Project" FromRole="Project" ToRole="UserStory" />
+  </EntityType>
+  <EntityType Name="ProjectTask">
+    <Key>
+      <PropertyRef Name="ProjectTaskId" />
+    </Key>
+    <Property Name="ProjectTaskId" Type="Int32" Nullable="false" />
+    <Property Name="AssignedTo" Type="Int32" />
+    <Property Name="TaskStartDate" Type="DateTime" Precision="3" />
+    <Property Name="TaskEndDate" Type="DateTime" Precision="3" />
+    <Property Name="TaskCompletion" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserStoryId" Type="Int32" />
+    <NavigationProperty Name="ManagerCommunications" Relationship="ProjectTrackingDBModel.FK_ManagerCommunication_ProjectTask" FromRole="ProjectTask" ToRole="ManagerCommunication" />
+    <NavigationProperty Name="UserStory" Relationship="ProjectTrackingDBModel.FK_ProjectTask_UserStory" FromRole="ProjectTask" ToRole="UserStory" />
+  </EntityType>
+  <EntityType Name="UserStory">
+    <Key>
+      <PropertyRef Name="UserStoryId" />
+    </Key>
+    <Property Name="UserStoryId" Type="Int32" Nullable="false" />
+    <Property Name="Story" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectId" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="ProjectTrackingDBModel.FK_UserStory_Project" FromRole="UserStory" ToRole="Project" />
+    <NavigationProperty Name="ProjectTasks" Relationship="ProjectTrackingDBModel.FK_ProjectTask_UserStory" FromRole="UserStory" ToRole="ProjectTask" />
+  </EntityType>
+  <Association Name="FK_ManagerCommunication_ProjectTask">
+    <End Role="ProjectTask" Type="ProjectTrackingDBModel.ProjectTask" Multiplicity="0..1" />
+    <End Role="ManagerCommunication" Type="ProjectTrackingDBModel.ManagerCommunication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectTask">
+        <PropertyRef Name="ProjectTaskId" />
+      </Principal>
+      <Dependent Role="ManagerCommunication">
+        <PropertyRef Name="ProjectTaskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserStory_Project">
+    <End Role="Project" Type="ProjectTrackingDBModel.Project" Multiplicity="0..1" />
+    <End Role="UserStory" Type="ProjectTrackingDBModel.UserStory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="UserStory">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTask_UserStory">
+    <End Role="UserStory" Type="ProjectTrackingDBModel.UserStory" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="ProjectTrackingDBModel.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserStory">
+        <PropertyRef Name="UserStoryId" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="UserStoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TransitExecModelStoreContainer" CdmEntityContainer="TransitExecEntities">
+    <EntitySetMapping Name="tblDriverSchedules">
+      <EntityTypeMapping TypeName="TransitExecModel.tblDriverSchedule">
+        <MappingFragment StoreEntitySet="tblDriverSchedule">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="DepatureDateTime" ColumnName="DepatureDateTime" />
+          <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+          <ScalarProperty Name="PickupLongitude" ColumnName="PickupLongitude" />
+          <ScalarProperty Name="PickupLatitude" ColumnName="PickupLatitude" />
+          <ScalarProperty Name="DropLongilude" ColumnName="DropLongilude" />
+          <ScalarProperty Name="DropLatitude" ColumnName="DropLatitude" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusDetail" ColumnName="StatusDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLoginTables">
+      <EntityTypeMapping TypeName="TransitExecModel.tblLoginTable">
+        <MappingFragment StoreEntitySet="tblLoginTable">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ImageURl" ColumnName="ImageURl" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblScheduleDetails">
+      <EntityTypeMapping TypeName="TransitExecModel.tblScheduleDetail">
+        <MappingFragment StoreEntitySet="tblScheduleDetail">
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HomeNumber" ColumnName="HomeNumber" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="ScheduleTime" ColumnName="ScheduleTime" />
+          <ScalarProperty Name="AppointmentTime" ColumnName="AppointmentTime" />
+          <ScalarProperty Name="BrokerAuth" ColumnName="BrokerAuth" />
+          <ScalarProperty Name="BrokerMileage" ColumnName="BrokerMileage" />
+          <ScalarProperty Name="CompanyMileage" ColumnName="CompanyMileage" />
+          <ScalarProperty Name="DispatchNumber" ColumnName="DispatchNumber" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="DepatureDateTime" ColumnName="DepatureDateTime" />
+          <ScalarProperty Name="AppointmentDateTime" ColumnName="AppointmentDateTime" />
+          <ScalarProperty Name="PickupLongitude" ColumnName="PickupLongitude" />
+          <ScalarProperty Name="PickupLatitude" ColumnName="PickupLatitude" />
+          <ScalarProperty Name="DropLongilude" ColumnName="DropLongilude" />
+          <ScalarProperty Name="DropLatitude" ColumnName="DropLatitude" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusType" ColumnName="StatusType" />
+          <ScalarProperty Name="StatusDetail" ColumnName="StatusDetail" />
+          <ScalarProperty Name="ODO" ColumnName="ODO" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Fare" ColumnName="Fare" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Tickets" ColumnName="Tickets" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVehiclesDetails">
+      <EntityTypeMapping TypeName="TransitExecModel.tblVehiclesDetail">
+        <MappingFragment StoreEntitySet="tblVehiclesDetail">
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="LastLongitude" ColumnName="LastLongitude" />
+          <ScalarProperty Name="LastLatitude" ColumnName="LastLatitude" />
+          <ScalarProperty Name="CurrentLongitude" ColumnName="CurrentLongitude" />
+          <ScalarProperty Name="CurrentLatitude" ColumnName="CurrentLatitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

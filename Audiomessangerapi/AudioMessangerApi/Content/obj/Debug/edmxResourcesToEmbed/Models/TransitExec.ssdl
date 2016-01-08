@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransitExecModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TransitExecModelStoreContainer">
+    <EntitySet Name="tblDriverSchedule" EntityType="TransitExecModel.Store.tblDriverSchedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblLoginTable" EntityType="TransitExecModel.Store.tblLoginTable" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblScheduleDetail" EntityType="TransitExecModel.Store.tblScheduleDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblVehiclesDetail" EntityType="TransitExecModel.Store.tblVehiclesDetail" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblDriverSchedule">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="VehicleId" />
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+    <Property Name="ScheduleId" Type="int" Nullable="false" />
+    <Property Name="ScheduleDate" Type="datetime" />
+    <Property Name="DepatureDateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppointmentDateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="PickupLongitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="PickupLatitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="DropLongilude" Type="nvarchar" MaxLength="50" />
+    <Property Name="DropLatitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="StatusDetail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblLoginTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageURl" Type="nvarchar(max)" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblScheduleDetail">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="HomeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ScheduleTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppointmentTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrokerAuth" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrokerMileage" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyMileage" Type="nvarchar" MaxLength="50" />
+    <Property Name="DispatchNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ScheduleDate" Type="datetime" />
+    <Property Name="DepatureDateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppointmentDateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="PickupLongitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="PickupLatitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="DropLongilude" Type="nvarchar" MaxLength="50" />
+    <Property Name="DropLatitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="StatusType" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusDetail" Type="nvarchar(max)" />
+    <Property Name="ODO" Type="float" />
+    <Property Name="Time" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fare" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tickets" Type="nvarchar" MaxLength="50" />
+    <Property Name="Signature" Type="image" />
+  </EntityType>
+  <EntityType Name="tblVehiclesDetail">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehicleNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastLongitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastLatitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentLongitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentLatitude" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

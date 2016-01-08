@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectTrackingDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ProjectTrackingDBModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="ProjectTrackingDBModel.Store.Employee" store:Type="Tables" store:Schema="dbo" store:Name="Employee">
+      <DefiningQuery>SELECT 
+      [Employee].[EmployeeId] AS [EmployeeId], 
+      [Employee].[EmployeeName] AS [EmployeeName], 
+      [Employee].[Designation] AS [Designation], 
+      [Employee].[ManagerId] AS [ManagerId], 
+      [Employee].[ContactNo] AS [ContactNo], 
+      [Employee].[EmailId] AS [EmailId], 
+      [Employee].[SkillSets] AS [SkillSets]
+      FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ManagerCommunication" EntityType="ProjectTrackingDBModel.Store.ManagerCommunication" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Project" EntityType="ProjectTrackingDBModel.Store.Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProjectTask" EntityType="ProjectTrackingDBModel.Store.ProjectTask" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserStory" EntityType="ProjectTrackingDBModel.Store.UserStory" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ManagerCommunication_ProjectTask" Association="ProjectTrackingDBModel.Store.FK_ManagerCommunication_ProjectTask">
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+      <End Role="ManagerCommunication" EntitySet="ManagerCommunication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTask_UserStory" Association="ProjectTrackingDBModel.Store.FK_ProjectTask_UserStory">
+      <End Role="UserStory" EntitySet="UserStory" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserStory_Project" Association="ProjectTrackingDBModel.Store.FK_UserStory_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="UserStory" EntitySet="UserStory" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ProjectTrackingDB.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar(max)" />
+    <Property Name="ManagerId" Type="int" />
+    <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkillSets" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ManagerCommunication">
+    <Key>
+      <PropertyRef Name="ManagerCommunicationId" />
+    </Key>
+    <Property Name="ManagerCommunicationId" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectTaskId" Type="int" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="Projectname" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Enddate" Type="datetime" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectTask">
+    <Key>
+      <PropertyRef Name="ProjectTaskId" />
+    </Key>
+    <Property Name="ProjectTaskId" Type="int" Nullable="false" />
+    <Property Name="AssignedTo" Type="int" />
+    <Property Name="TaskStartDate" Type="datetime" />
+    <Property Name="TaskEndDate" Type="datetime" />
+    <Property Name="TaskCompletion" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserStoryId" Type="int" />
+  </EntityType>
+  <EntityType Name="UserStory">
+    <Key>
+      <PropertyRef Name="UserStoryId" />
+    </Key>
+    <Property Name="UserStoryId" Type="int" Nullable="false" />
+    <Property Name="Story" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectId" Type="int" />
+  </EntityType>
+  <Association Name="FK_ManagerCommunication_ProjectTask">
+    <End Role="ProjectTask" Type="ProjectTrackingDBModel.Store.ProjectTask" Multiplicity="0..1" />
+    <End Role="ManagerCommunication" Type="ProjectTrackingDBModel.Store.ManagerCommunication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectTask">
+        <PropertyRef Name="ProjectTaskId" />
+      </Principal>
+      <Dependent Role="ManagerCommunication">
+        <PropertyRef Name="ProjectTaskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTask_UserStory">
+    <End Role="UserStory" Type="ProjectTrackingDBModel.Store.UserStory" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="ProjectTrackingDBModel.Store.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserStory">
+        <PropertyRef Name="UserStoryId" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="UserStoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserStory_Project">
+    <End Role="Project" Type="ProjectTrackingDBModel.Store.Project" Multiplicity="0..1" />
+    <End Role="UserStory" Type="ProjectTrackingDBModel.Store.UserStory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="UserStory">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'ProjectTrackingDB.dbo.tblTaxiLocation' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="tblTaxiLocation">
+        <Property Name="TaxiId" Type="int" />
+        <Property Name="TaxiNo" Type="nvarchar" MaxLength="50" />
+        <Property Name="DriverName" Type="nvarchar" MaxLength="50" />
+        <Property Name="StartLongitude" Type="nvarchar" MaxLength="50" />
+        <Property Name="StartLatitude" Type="nvarchar" MaxLength="50" />
+        <Property Name="CurrentLongitude" Type="nvarchar" MaxLength="50" />
+        <Property Name="CurrentLatitude" Type="nvarchar" MaxLength="50" />
+        <Property Name="StartTime" Type="time" />
+        <Property Name="WaittingTime" Type="time" />
+      </EntityType>-->
+</Schema>

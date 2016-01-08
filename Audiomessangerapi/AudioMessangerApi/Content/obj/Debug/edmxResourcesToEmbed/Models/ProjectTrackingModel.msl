@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectTrackingDBModelStoreContainer" CdmEntityContainer="ProjectTrackingDBEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ProjectTrackingDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="SkillSets" ColumnName="SkillSets" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManagerCommunications">
+      <EntityTypeMapping TypeName="ProjectTrackingDBModel.ManagerCommunication">
+        <MappingFragment StoreEntitySet="ManagerCommunication">
+          <ScalarProperty Name="ManagerCommunicationId" ColumnName="ManagerCommunicationId" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ProjectTaskId" ColumnName="ProjectTaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="ProjectTrackingDBModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Projectname" ColumnName="Projectname" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTasks">
+      <EntityTypeMapping TypeName="ProjectTrackingDBModel.ProjectTask">
+        <MappingFragment StoreEntitySet="ProjectTask">
+          <ScalarProperty Name="ProjectTaskId" ColumnName="ProjectTaskId" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="TaskStartDate" ColumnName="TaskStartDate" />
+          <ScalarProperty Name="TaskEndDate" ColumnName="TaskEndDate" />
+          <ScalarProperty Name="TaskCompletion" ColumnName="TaskCompletion" />
+          <ScalarProperty Name="UserStoryId" ColumnName="UserStoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserStories">
+      <EntityTypeMapping TypeName="ProjectTrackingDBModel.UserStory">
+        <MappingFragment StoreEntitySet="UserStory">
+          <ScalarProperty Name="UserStoryId" ColumnName="UserStoryId" />
+          <ScalarProperty Name="Story" ColumnName="Story" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

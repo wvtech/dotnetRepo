@@ -1,0 +1,144 @@
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.dll.config
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.pdb
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\Antlr3.Runtime.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\EntityFramework.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\MoonAPNS.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\Newtonsoft.Json.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\NLog.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Amazon.Adm.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Android.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Apple.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Blackberry.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Core.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.FirefoxOS.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Google.Chrome.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Windows.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.WindowsPhone.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.IO.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Extensions.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Formatting.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Primitives.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.WebRequest.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Runtime.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Threading.Tasks.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Helpers.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.WebHost.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Mvc.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Optimization.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Providers.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Razor.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Deployment.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Razor.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\WebGrease.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\Newtonsoft.Json.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\NLog.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.IO.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Extensions.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Formatting.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Primitives.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.WebRequest.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Runtime.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Threading.Tasks.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\EntityFramework.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Helpers.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.WebHost.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Mvc.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Razor.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Deployment.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Razor.xml
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.csproj.App.config
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.dll
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.pdb
+D:\Abhishek Kaushal\Ofiice Project\Arpan\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.csprojResolveAssemblyReference.cache
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.dll.config
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\AudioMessangerApi.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Antlr3.Runtime.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Baidu.SDK.Push.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\EntityFramework.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.Core.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.PlatformServices.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\log4net.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\MoonAPNS.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Newtonsoft.Json.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\NLog.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Amazon.Adm.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Android.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Apple.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Blackberry.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Core.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.FirefoxOS.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Google.Chrome.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.Windows.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\PushSharp.WindowsPhone.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.IO.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Extensions.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Formatting.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Primitives.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.WebRequest.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Runtime.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Threading.Tasks.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Helpers.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.WebHost.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Mvc.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Optimization.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Providers.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Razor.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Deployment.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Razor.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\WebGrease.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Zlib.Portable.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Baidu.SDK.Push.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Baidu.SDK.Push.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.Core.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.Core.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.PlatformServices.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Google.Apis.PlatformServices.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\log4net.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Newtonsoft.Json.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\NLog.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.IO.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Extensions.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Formatting.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.Primitives.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Net.Http.WebRequest.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Runtime.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Threading.Tasks.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\EntityFramework.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Helpers.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Http.WebHost.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Mvc.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.Razor.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Deployment.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\System.Web.WebPages.Razor.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Zlib.Portable.xml
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.csproj.App.config
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.pdb
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\obj\Debug\AudioMessangerApi.csprojResolveAssemblyReference.cache
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Simple.Owin.Cors4.dll
+D:\Transitapi\AudioMessangerApi\AudioMessangerApi\bin\Simple.Owin.Cors4.xml
