@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TransitApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- Login Data -->
+    <string name="userlogin">User Login</string>
+    <string name="rememberusername">remember username</string>
+    <string name="server">server</string>
+    <string name="login">LOGIN</string>
+    <!-- Vehicle data -->
+    <string name="vehicles">Vehicles</string>
+    <string name="calling">Calling</string>
+    <string name="driverlist">Driver List</string>
+    <string name="viewschedule">View Schedule</string>
+    <string name="selectvehicle">Select Vehicle</string>
+    <string name="myprofile">My Profile</string>
+    <!-- Myschedule list Data -->
+    <string name="myschedule">My Schedule</string>
+    <string name="viewdetails">View Details</string>
+    <string name="fullreport">Full Report</string>
+    <!-- My Schedule Report data -->
+    <string name="home">Home #:</string>
+    <string name="mobile">Mobile #:</string>
+    <string name="scheduledtime">Scheduled time</string>
+    <string name="appoinmenttime">Appoinment time</string>
+    <string name="brokerauth">Broker auth</string>
+    <string name="brokermileage">Broker mileage</string>
+    <string name="companymileage">Company mileage</string>
+    <string name="dispatchnumber">Dispatch number</string>
+    <string name="reportstatus">Report Status</string>
+    <!-- Report Status Data -->
+    <string name="status">Status</string>
+    <string name="odo">ODO</string>
+    <string name="time">Time</string>
+    <string name="amount">Amount</string>
+    <string name="done">Done</string>
+    <!-- user Profile -->
+    <string name="userprofile">User Profile</string>
+    <string name="update">UPDATE</string>
+
+    <string name="Status_prompt">Choose a Status</string>
+    <string-array name="Status_array">
+        <item>New</item>
+        <item>Cancelled</item>
+        <item>Done</item>
+       <item>Cancel At Door</item>
+        <item>Dispatched</item>
+        <item>On Board</item>
+        <item>No Show</item>
+        <item>Ready For Pickup</item>
+        <item>On Site</item>
+
+    </string-array>
+    <string name="Fare_prompt">Choose a Status</string>
+    <string-array name="Fare_array">
+        <item>Test1</item>
+        <item>Test2</item>
+        <item>Test3</item>
+       
+
+    </string-array>
+    <string name="Tickets_prompt">Choose a Status</string>
+    <string-array name="Tickets_array">
+       <item>Test1</item>
+        <item>Test2</item>
+        <item>Test3</item>
+       
+
+    </string-array>
+    <string name="FuelType_prompt">Choose a Status</string>
+    <string-array name="FuelType_array">
+        <item>Gas</item>
+        <item>Clean Diesel</item>
+      
+       
+
+    </string-array>
+</resources>

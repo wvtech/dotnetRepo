@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/darkbg">
+    <include
+        layout="@layout/titleimagetext"
+        android:id="@+id/signaturepadtitle" />
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/signaturepadtitle"
+        android:padding="5dp">
+        <LinearLayout
+            android:id="@+id/llimageview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <DatePicker
+                android:id="@+id/datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:endYear="2100"
+                android:startYear="1900" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/signaturepadfooter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#15232E"
+            android:weightSum="1"
+            android:padding="10dp"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/llLoadSchedule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#f3cb37"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_margin="4dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtLoadSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Load Schedule"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    <!--        <LinearLayout
+            android:id="@+id/llgetsignature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#f3cb37"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_margin="4dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtgetsignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>-->
+    </LinearLayout>
+</RelativeLayout>

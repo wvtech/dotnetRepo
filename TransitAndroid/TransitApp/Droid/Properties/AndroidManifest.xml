@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.widevision.transitapp">
+	<!--	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="22" />-->
+	<application android:label="TransitApp" android:icon="@drawable/logo">
+	</application>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.REORDER_TASKS" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="22" />
+</manifest>

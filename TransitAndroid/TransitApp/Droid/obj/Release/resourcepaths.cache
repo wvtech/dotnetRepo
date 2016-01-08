@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <AdditionalAndroidResourcePaths>/Users/cisco/.local/share/Xamarin/GooglePlayServices.Base/25.0.0/embedded;/Users/cisco/.local/share/Xamarin/GooglePlayServices.Gcm/25.0.0/embedded;/Users/cisco/.local/share/Xamarin/Android.Support.v4/22.2.1/embedded</AdditionalAndroidResourcePaths>
+  <AdditionalJavaLibraryReferences>/Users/cisco/.local/share/Xamarin/GooglePlayServices.Base/25.0.0/embedded/classes.jar;/Users/cisco/.local/share/Xamarin/GooglePlayServices.Gcm/25.0.0/embedded/classes.jar;/Users/cisco/.local/share/Xamarin/Android.Support.v4/22.2.1/embedded/classes.jar;/Users/cisco/.local/share/Xamarin/Android.Support.v4/22.2.1/embedded/libs/internal_impl-22.2.1.jar</AdditionalJavaLibraryReferences>
+  <AdditionalNativeLibraryReferences></AdditionalNativeLibraryReferences>
+</Paths>

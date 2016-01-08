@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.widevision.transitapp">
+  <!--	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="22" />-->
+  <application android:label="TransitApp" android:icon="@drawable/logo" android:name="mono.android.app.Application">
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.DriverListActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.AudioCallingActivity" />
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5614ba531d1bc8f797d622e04875eee7d.GcmBroadcastReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.widevision.transitapp" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.widevision.transitapp" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.gcm.intent.RETRY" />
+        <category android:name="com.widevision.transitapp" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md5614ba531d1bc8f797d622e04875eee7d.PushHandlerService" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.VehicleListActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.ScheduleActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.ScheduleDetailsActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.FuleReportActivity" />
+    <activity android:label="LocationManager" android:name="md5614ba531d1bc8f797d622e04875eee7d.LocationManagers" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.UserProfileActivity" />
+    <service android:name="md5614ba531d1bc8f797d622e04875eee7d.LocationService" />
+    <activity android:icon="@drawable/logo" android:name="md5614ba531d1bc8f797d622e04875eee7d.MainActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.ReportStatusActivity" />
+    <activity android:name="md5614ba531d1bc8f797d622e04875eee7d.SignaturePadActivity" />
+    <activity android:label="BreakTimeActivity" android:name="md5614ba531d1bc8f797d622e04875eee7d.BreakTimeActivity" />
+    <service android:name="md5614ba531d1bc8f797d622e04875eee7d.DriverListService" />
+    <activity android:label="LoadScheduleActivity" android:name="md5614ba531d1bc8f797d622e04875eee7d.LoadScheduleActivity" />
+    <activity android:name="md5b8dfd364381559009fcecf8d0459578a.SignaturePadActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.widevision.transitapp.mono.MonoRuntimeProvider.__mono_init__" />
+    <activity android:icon="@drawable/logo" android:name="com.widevision.transitapp.TrialSplashScreen" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" />
+  <uses-permission android:name="android.permission.REORDER_TASKS" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="22" />
+  <permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="com.widevision.transitapp.permission.C2D_MESSAGE" />
+</manifest>
