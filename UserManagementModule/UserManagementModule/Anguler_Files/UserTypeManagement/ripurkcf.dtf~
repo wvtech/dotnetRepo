@@ -1,0 +1,145 @@
+﻿(function () {
+    'use strict';
+
+
+    App.controller('UserPermissions', ManagePermissions);
+
+    ManagePermissions.$inject = ['$location', '$rootScope', '$scope', 'FlashService', 'RoleService', '$stateParams', 'CurrentProfileService', 'UserPermissionsServices', 'ModuleServices'];
+    function ManagePermissions($location, $rootScope, $scope, FlashService, RoleService, $stateParams, CurrentProfileService, UserPermissionsServices, ModuleServices) {
+        $scope.AllModules = {}; $scope.All = {}; $scope.ADD = {}; $scope.EDIT = {}; $scope.DELETE = {}; $scope.VIEW = {}; $scope.REACTIVE = {}; $scope.PRINT = {}; $scope.FINALIZE = {};
+        $scope.CurrentUser = CurrentProfileService.GetCurrentProfile();
+        $scope.SelectAll = false;
+        $scope.SelectAllAdd = false;
+        $scope.SelectAllEdit = false;
+        $scope.SelectAllDelete = false;
+        $scope.SelectAllView = false;
+        $scope.SelectAllReactivate = false;
+        $scope.SelectAllPrint = false;
+        $scope.SelectAllFinalize = false;  
+
+        $scope.GetRoleByOrgId = function () {
+
+            var Org_Id = $scope.CurrentUser.OrgId;
+            var data = { "Id": Org_Id, "RoleName": "" };
+            $scope.newRole = RoleService.GetRoleByOrgId(data);
+            $scope.newRole.then(function (data) {
+                for (var i = 0; i < data.data.length; i++) {
+                    if (data.data[i].CreatedByOrg_Id != 58) {
+                        $scope.OrganizationRoles = true;
+                    }
+                }
+                $scope.Roles = data.data;
+            });
+        }
+
+        $scope.GetRoleByOrgId();
+
+        GetAllModuleListByOrgId();
+        function GetAllModuleListByOrgId() {
+            var data = { "Id": $scope.CurrentUser.OrgId };
+            var responce = ModuleServices.GetAllModuleListByOrgId(data);
+            responce.then(function (data) {
+
+                $scope.Modules = data.data;
+                console.log($scope.Modules, '$scope.Modules');
+            }, function (error) {
+
+            });
+        }
+
+        $scope.SelectAllModules = function () {
+            if ($scope.SelectAll) {
+                
+                $scope.SelectAllAdd = $scope.SelectAllEdit = $scope.SelectAllDelete = $scope.SelectAllView = $scope.SelectAllReactivate = $scope.SelectAllPrint = $scope.SelectAllFinalize = true;
+            }
+            else {
+                
+                $scope.SelectAllAdd = $scope.SelectAllEdit = $scope.SelectAllDelete = $scope.SelectAllView = $scope.SelectAllReactivate = $scope.SelectAllPrint = $scope.SelectAllFinalize = false;
+
+
+            }
+        }
+
+       
+        $scope.set_SelectAllPermission = function (PId) {
+            alert(PId);
+            
+            if ($scope.All[PId]) {
+                alert('true');
+                $scope.AllModules[PId] = true;
+                $scope.ADD[PId] = true;
+                $scope.EDIT[PId] = true;
+                $scope.DELETE[PId] = true;
+                $scope.VIEW[PId] = true;
+                $scope.REACTIVE[PId] = true;
+                $scope.PRINT[PId] = true;
+                $scope.FINALIZE[PId] = true;
+            }
+            else {
+                alert('false');
+                $scope.AllModules[PId] = false;
+                $scope.ADD[PId] = false;
+                $scope.EDIT[PId] = false;
+                $scope.DELETE[PId] = false;
+                $scope.VIEW[PId] = false;
+                $scope.REACTIVE[PId] = false;
+                $scope.PRINT[PId] = false;
+                $scope.FINALIZE[PId] = false;
+            }
+        }
+
+        $scope.set_SelectAllModulePermission = function (PId) {
+            alert(PId);
+            
+            if ($scope.AllModules[PId]) {
+                alert('true');
+                $scope.All[PId] = true;
+                $scope.ADD[PId] = true;
+                $scope.EDIT[PId] = true;
+                $scope.DELETE[PId] = true;
+                $scope.VIEW[PId] = true;
+                $scope.REACTIVE[PId] = true;
+                $scope.PRINT[PId] = true;
+                $scope.FINALIZE[PId] = true;
+            }
+            else {
+                alert('false');
+                $scope.All[PId] = false;
+                $scope.ADD[PId] = false;
+                $scope.EDIT[PId] = false;
+                $scope.DELETE[PId] = false;
+                $scope.VIEW[PId] = false;
+                $scope.REACTIVE[PId] = false;
+                $scope.PRINT[PId] = false;
+                $scope.FINALIZE[PId] = false;
+            }
+        }
+
+        $scope.set_SelectAllAdd = function (PId)
+        {
+             
+            if ($scope.ADD[PId])
+            {
+                alert('true');
+                $scope.All[PId] = true; $scope.VIEW[PId] = true;
+            }
+            else
+            {
+                alert('false');
+                $scope.All[PId] = false; $scope.VIEW[PId] = false;
+            }
+        }
+
+        $scope.set_SelectAllEdit = function (PId) {
+            
+            if ($scope.EDIT[PId]) {
+                alert('true');
+                $scope.All[PId] = true; $scope.VIEW[PId] = true;
+            }
+            else {
+                alert('false');
+                $scope.All[PId] = false; $scope.VIEW[PId] = false;
+            }
+        }
+    }
+})();

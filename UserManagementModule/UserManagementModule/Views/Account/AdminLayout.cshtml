@@ -1,0 +1,22 @@
+﻿<div>
+    <ul>
+        <li ui-sref-active="active">
+            <a ui-sref="App">App</a>
+        </li>
+        <li ui-sref-active="active">
+            <a href="#" ng-click="logout()">Logout</a>
+        </li>
+        <li ng-class="{'active':$state.includes('App')}">
+            <a ui-sref="App.ManageProfile">Manage Profile</a>
+        </li>
+        <li ng-class="{'active':$state.includes('App')}" >
+            <a ui-sref="App.ManageUsers">Manage Users</a>
+        </li>
+        
+      </ul>
+  
+  
+     <div ui-view>
+
+    </div>
+</div>

@@ -1,0 +1,166 @@
+﻿<div>
+
+    <form name="AddUser">
+        <div class="container">
+            <a ui-sref="Login">Login</a>
+
+            <h2 class="font-normal">Create a new accounts</h2>
+            <div class="row">
+                <span>Registered As </span><br />
+                <div>
+                    <label><input type="radio" ng-init="RegModel.RegisteredAs='Organization'" ng-model="RegModel.RegisteredAs" name="RegisteredAs" value="Organization" required />Organization</label>
+                    <label><input type="radio" ng-model="RegModel.RegisteredAs" name="RegisteredAs" value="Individual" required />Individual</label>
+                </div>
+                <div class="col-md-5">
+                    <!-- Form Name -->
+                    <div class="form-group topGap-25">
+                        <div class="form-group topGap-25">
+                            <span class="control-label">Organization Name</span>
+                            <span>
+                                <input type="text" ng-model="RegModel.Org_Name" name="OrgName" placeholder="" class="form-control input-md" ng-required="RegModel.RegisteredAs=='Organization'" ng-disabled="RegModel.RegisteredAs=='Individual' || loading " />
+                                <span style="color:red" ng-show="AddUser.OrgName.$dirty && AddUser.OrgName.$invalid">Organization Name is required.</span>
+                            </span>
+                        </div>
+                        <!--<div class="form-group topGap-25">
+                            <span class="control-label">Organization Street</span>
+                            <span>
+                                <input type="text" ng-model="RegModel.Org_Street" name="OrgStreet" placeholder="" class="form-control input-md" ng-disabled="RegModel.Org_RegisteredAs=='Individual'" />
+                            </span>
+                        </div>
+
+                        <div class="form-group topGap-25">
+                            <span class="control-label">Organization State</span>
+                            <span>
+                                <input type="text" id="Org_State" ng-model="RegModel.Org_StateId" name="OrgState" placeholder="" class="form-control input-md" ng-disabled="RegModel.Org_RegisteredAs=='Individual'" />
+                            </span>
+                        </div>
+
+                        <div class="form-group topGap-25">
+                            <span class="control-label">Organization City</span>
+                            <span>
+                                <input type="text" ng-model="RegModel.Org_CityId" name="OrgCity" placeholder="" class="form-control input-md" ng-disabled="RegModel.Org_RegisteredAs=='Individual'" />
+                            </span>
+                        </div>-->
+
+                        <span class="control-label">First Name</span>
+                        <span>
+                            <input name="FirstName" ng-model="RegModel.UserFirstName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.FirstName.$dirty && AddUser.FirstName.$invalid">FirstName is required.</span>
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Last Name</span>
+                        <span>
+                            <input name="LastName" ng-model="RegModel.UserLastName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.LastName.$dirty && AddUser.LastName.$invalid">LastName is required.</span>
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">User Name</span>
+                        <span>
+                            
+                            <input name="Username" ng-model="RegModel.UserName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required data-unique-username>
+                            <span style="color:red" ng-show="AddUser.Username.$dirty && AddUser.Username.$error.required">User Name is required.</span>
+                            <span style="color:red" ng-show="AddUser.Username.$error.isDuplicateUsername">This UserName is already taken.</span>
+                        </span>
+                    </div>
+
+                    
+                    <div class="form-group topGap-25">
+                        <span class="control-label">City_User</span>                       
+                            <div class="main">
+                                <autocomplete ng-model="RegModel.UserCity" ng-disabled="loading" attr-placeholder="type to search Cities..." click-activation="true" data="cities" on-type="updateCities"></autocomplete>
+                            </div>
+                            <span style="color:red" ng-show="AddUser.City.$dirty && AddUser.City.$invalid">City is required.</span>
+                       </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">State</span>
+                         
+                            <div class="main">
+                             
+                                <autocompletestate ng-model="RegModel.UserState" ng-disabled="loading" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates"></autocompletestate>
+                            </div>
+                            <span style="color:red" ng-show="AddUser.State.$dirty && AddUser.State.$invalid">State is required.</span>
+                       
+                    </div>
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Street</span>
+                        <span>
+                            <input name="Street" type="text" ng-disabled="loading" ng-model="RegModel.UserStreet" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.Street.$dirty && AddUser.Street.$invalid">Street is required.</span>
+                        </span>
+                    </div>
+                    <!-- Text input-->
+                </div>
+                <div class="col-md-5 ">
+
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Email Address</span>
+                        <span>
+                            <input name="Email" type="email" ng-disabled="loading" ng-model="RegModel.UserEmailId" placeholder="Email Address" class="form-control input-md" required data-unique-email>
+                           
+                            <span style="color:red" ng-show="AddUser.Email.$error.email">Invalid Email address.</span>
+                            <span style="color:red" ng-show="AddUser.Email.$dirty && AddUser.Email.$error.required">Email is required.</span>
+                            <span style="color:red" ng-show="AddUser.Email.$error.isDuplicatedEmail">This Email is already taken.</span>
+
+                        </span>
+
+                        <span id="ValidateEmail"></span>
+                    </div>
+
+                    <!-- Password input-->
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Password </span>
+                        <span>
+                            <input name="Password" ng-model="RegModel.Password" ng-disabled="loading" type="password" placeholder="" minlength="7" ng-maxlength="15" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.Password.$dirty && AddUser.Password.$invalid">Password is required.</span>
+                            <span style="color: red" class="error" ng-show="AddUser.Password.$dirty && AddUser.Password.$error.minlength">Atleast 7 characters required.</span>
+
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Confirm Password </span>
+                        <span>
+                            <input name="ConfirmPassword" ng-model="RegModel.ConfirmPassord" ng-disabled="loading" type="password" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.ConfirmPassword.$dirty && AddUser.ConfirmPassword.$invalid">Confirm Password is required.</span>
+                            <span style="color:red" ng-show="AddUser.ConfirmPassword.$dirty && RegModel.ConfirmPassord!=RegModel.Password">Password and Confirm Password do not match.</span>
+                        </span>
+
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Contact No. </span>
+                        <span>
+                            <input name="Number" ng-model="RegModel.UserMobileNo" ng-disabled="loading" type="text" maxlength="14" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.Number.$dirty && AddUser.Number.$invalid">Contact No. is required.</span>
+                        </span>
+
+                    </div>
+                   
+                    <!--<div class="form-group topGap-25">
+                        <span class="control-label">Zip Code</span>
+                        <span>
+                            <input id="zipcode" name="Zipcode" type="text" ng-model="RegModel.ZipCode" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="AddUser.Zipcode.$dirty && AddUser.Zipcode.$invalid">Zip Code is required.</span>
+                        </span>
+                    </div>-->
+                    <!---checkbox input---->
+
+                </div>
+
+                <!-- /.row -->
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+
+                <div class="topGap-10">
+                    <input type="submit" name="singlebutton" class="btn btn-primary" ng-disabled="AddUser.$invalid || loading" ng-click="InsertOrgAndUser(RegModel)" value="Register" /><span class="leftGap-10">Already have an account? <a href='#'>Click Here</a> </span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+

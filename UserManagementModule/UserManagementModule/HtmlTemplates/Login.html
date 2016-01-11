@@ -1,0 +1,26 @@
+﻿<a ui-sref="Register">Register</a>
+<a ui-sref="Login">Login</a>
+
+
+<form method="post"  name="User_Login" id="User_Login" ng-submit="login()">
+    <div ng-hide="Register">
+        <div ui-view></div>
+        <div class="form-group topGap-25">
+            <span class="control-label">UserName</span>
+            <span>
+                <input id="login" name="username" type="text" autocomplete="on" ng-disabled="Login" ng-model="email" placeholder="" class=" " required>
+            </span>
+        </div>
+        <div class="form-group topGap-25">
+            <span class="control-label">Password</span>
+            <span>
+                <input id="password" name="password" type="password" ng-disabled="Login" ng-model="password" autocomplete="on" placeholder="" class=" " required>
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="topGap-10">
+                <button type="submit" ng-disabled="User_Login.$invalid || loading" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</form> 

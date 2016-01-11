@@ -1,0 +1,127 @@
+﻿<div>
+
+    <form name="createUser">
+        <div class="container">
+
+            <h2 class="font-normal">Create User</h2>
+            <div class="row">
+
+                <div class="col-md-5">
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">First Name</span>
+                        <span>
+                            <input name="FirstName" ng-model="UserModel.UserFirstName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.FirstName.$dirty && createUser.FirstName.$invalid">FirstName is required.</span>
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Last Name</span>
+                        <span>
+                            <input name="LastName" ng-model="UserModel.UserLastName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.LastName.$dirty && createUser.LastName.$invalid">LastName is required.</span>
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">User Name</span>
+                        <span>
+
+                            <input name="Username" ng-model="UserModel.UserName" type="text" ng-disabled="loading" placeholder="" class="form-control input-md" required data-unique-username>
+                            <span style="color:red" ng-show="createUser.Username.$dirty && createUser.Username.$error.required">User Name is required.</span>
+                            <span style="color:red" ng-show="createUser.Username.$error.isDuplicateUsername">This UserName is already taken.</span>
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">User Role</span>
+                        <div class="main">
+                            <autocompleteuserrole ng-model="UserModel.RoleName" ng-disabled="loading" attr-placeholder="type to search UserRoles..." click-activation="true" data="Roles" on-type="updateUserRoles"></autocompleteuserrole>
+                        </div>
+                        
+                      </div>
+
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">City</span>
+                        <div class="main">
+                            <autocomplete ng-model="UserModel.UserCity" ng-disabled="loading" attr-placeholder="type to search Cities..." click-activation="true" data="cities" on-type="updateCities"></autocomplete>
+                        </div>
+                        <span style="color:red" ng-show="createUser.City.$dirty && createUser.City.$invalid">City is required.</span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">State</span>
+
+                        <div class="main">
+                            <autocompletestate ng-model="UserModel.UserState" ng-disabled="loading" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates"></autocompletestate>
+                        </div>
+                        <span style="color:red" ng-show="createUser.State.$dirty && createUser.State.$invalid">State is required.</span>
+
+                    </div>
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Street</span>
+                        <span>
+                            <input name="Street" type="text" ng-disabled="loading" ng-model="UserModel.UserStreet" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.Street.$dirty && createUser.Street.$invalid">Street is required.</span>
+                        </span>
+                    </div>
+                    <!-- Text input-->
+                </div>
+                <div class="col-md-5 ">
+
+
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Email Address</span>
+                        <span>
+                            <input name="Email" type="email" ng-disabled="loading" ng-model="UserModel.UserEmailId" placeholder="Email Address" class="form-control input-md" required data-unique-email>
+
+                            <span style="color:red" ng-show="createUser.Email.$error.email">Invalid Email address.</span>
+                            <span style="color:red" ng-show="createUser.Email.$dirty && createUser.Email.$error.required">Email is required.</span>
+                            <span style="color:red" ng-show="createUser.Email.$error.isDuplicatedEmail">This Email is already taken.</span>
+
+                        </span>
+
+                        <span id="ValidateEmail"></span>
+                    </div>
+
+                    <!-- Password input-->
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Password </span>
+                        <span>
+                            <input name="Password" ng-model="UserModel.Password" ng-disabled="loading" type="password" placeholder="" minlength="7" ng-maxlength="15" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.Password.$dirty && createUser.Password.$invalid">Password is required.</span>
+                            <span style="color: red" class="error" ng-show="createUser.Password.$dirty && createUser.Password.$error.minlength">Atleast 7 characters required.</span>
+
+                        </span>
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Confirm Password </span>
+                        <span>
+                            <input name="ConfirmPassword" ng-model="UserModel.ConfirmPassord" ng-disabled="loading" type="password" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.ConfirmPassword.$dirty && AddUser.ConfirmPassword.$invalid">Confirm Password is required.</span>
+                            <span style="color:red" ng-show="createUser.ConfirmPassword.$dirty && UserModel.ConfirmPassord!=UserModel.Password">Password and Confirm Password do not match.</span>
+                        </span>
+
+                    </div>
+                    <div class="form-group topGap-25">
+                        <span class="control-label">Contact No. </span>
+                        <span>
+                            <input name="Number" ng-model="UserModel.UserMobileNo" ng-disabled="loading" type="text" maxlength="14" placeholder="" class="form-control input-md" required>
+                            <span style="color:red" ng-show="createUser.Number.$dirty && createUser.Number.$invalid">Contact No. is required.</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <div class="topGap-10">
+                    <input type="submit" name="singlebutton" class="btn btn-primary" ng-disabled="createUser.$invalid || loading" ng-click="CreateUser(UserModel)" value="Add User" />
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+
