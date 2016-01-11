@@ -3,68 +3,149 @@
 <head>
     <title></title>
 </head>
-<body><div data-ng-controller="Registration">
-    <form name="UpdateUser">
-        <div class="form-group topGap-25">
-            <span class="control-label">Organization State</span>
-            <div class="main">
-                <autocompleteorgstate ng-model="CurrentUser.OrgState" name="State" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates" required></autocompleteorgstate>
-            </div>
-            <span style="color:red" ng-show="UpdateUser.State.$dirty && UpdateUser.State.$invalid">State is required.</span>
+<body>
+    <div ng-app="App">
+        <div data-ng-controller="DemoCtrl">
+            <form name="UpdateUser">
+                <div class="form-group topGap-25">
+                    <span class="control-label">Organization State</span>
+                    <div class="main">
+                        <autocompleteorgstate ng-model="CurrentUser.OrgState" name="State" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates" required></autocompleteorgstate>
+                    </div>
+                    <span style="color:red" ng-show="UpdateUser.State.$dirty && UpdateUser.State.$invalid">State is required.</span>
+                </div>
+
+                <div class="form-group topGap-25">
+                    <span class="control-label">Organization City</span>
+                    <div class="main">
+                        <autocompleteorgcity ng-model="CurrentUser.OrgCity" name="City" attr-placeholder="type to search Cities..." click-activation="true" data="Cities" on-type="updateCities" required></autocompleteorgcity>
+
+                    </div>
+                    <span style="color:red" ng-show="UpdateUser.City.$dirty && UpdateUser.City.$invalid">City is required.</span>
+                </div>
+                <div class="form-group">
+
+                    <div class="topGap-10">
+                        <input type="submit" name="singlebutton" class="btn btn-primary" ng-click="GetValues()" value="Update" />
+                    </div>
+                </div>
+            </form>
         </div>
-
-        <div class="form-group topGap-25">
-            <span class="control-label">Organization City</span>
-            <div class="main">
-                <autocompleteorgcity ng-model="CurrentUser.OrgCity" name="City" attr-placeholder="type to search Cities..." click-activation="true" data="Cities" on-type="updateCities" required></autocompleteorgcity>
-
-            </div>
-            <span style="color:red" ng-show="UpdateUser.City.$dirty && UpdateUser.City.$invalid">City is required.</span>
-        </div>
-        <div class="form-group">
-
-            <div class="topGap-10">
-                <input type="submit" name="singlebutton" class="btn btn-primary" ng-click="GetValues()" value="Update" />
-            </div>
-        </div>
-    </form>
-</div>
-
+    </div>
 </body>
 </html>
 
 
 <script type="text/javascript">
+    var App = angular.module('App', []);
+
     (function () {
         'use strict';
 
 
-        App.controller('Registration', Registration);
+        App.controller('DemoCtrl', DemoCtrl);
 
-        Registration.$inject = ['$location', '$rootScope', '$scope',  'CityService', 'StateService'];
-        function Registration($location, $rootScope, $scope,  CityService, StateService ) {
+        DemoCtrl.$inject = ['$location', '$rootScope', '$scope', 'CityService', 'StateService'];
+        function DemoCtrl($location, $rootScope, $scope, CityService, StateService) {
 
             $scope.updateCities = function (typed) {
 
-                var data = { "CityName": typed };
-                $scope.newCity = CityService.AutoCompleteCity(data);
-                // This service call will return list of object of City type which has Properties as 'CityId' and  'CityName'
-                $scope.newCity.then(function (data) {
-                    $scope.Cities = data.data;
-                    // This list of 'Cities' will populate in <autocompleteorgcity> in our view.
-                });
+                //var data = { "CityName": typed };
+                //$scope.newCity = CityService.AutoCompleteCity(data);
+                //// This service call will return list of object of City type which has Properties as 'CityId' and  'CityName'
+                //$scope.newCity.then(function (data) {
+                //    $scope.Cities = data.data;
+                //    // This list of 'Cities' will populate in <autocompleteorgcity> in our view.
+                //});
+
+                // You can use static data as
+                $scope.Cities = [{
+                    "CityId": 1,
+                    "CityName": "Los Angeles"
+                },
+              {
+                  "CityId": 2,
+                  "CityName": "New York"
+              },
+             {
+                 "CityId": 3,
+                 "CityName": "Chicago"
+             },
+             {
+                 "CityId": 4,
+                 "CityName": "San Diego"
+             },
+            {
+                "CityId": 5,
+                "CityName": "San Antonio"
+            },
+            {
+                "CityId": 6,
+                "CityName": "San Francisco"
+            },
+             {
+                 "CityId": 7,
+                 "CityName": "Las Vegas"
+             },
+            {
+                "CityId": 8,
+                "CityName": "Oxnard"
+            },
+            {
+                "CityId": 9,
+                "CityName": "Tucson"
+            }];
+
+
             }
 
             $scope.updateStates = function (typed) {
 
-                var data = { "StateName": typed };
-                $scope.newState = StateService.AutoCompleteState(data);
-                // This service call will return list of object of State type which has Properties as 'StateId' and  'StateName'
-                $scope.newState.then(function (data) {
-                    $scope.States = data.data;
-                    // This list of 'States' will populate in <autocompleteorgstate> in our view.
+                //var data = { "StateName": typed };
+                //$scope.newState = StateService.AutoCompleteState(data);
+                //// This service call will return list of object of State type which has Properties as 'StateId' and  'StateName'
+                //$scope.newState.then(function (data) {
+                //    $scope.States = data.data;
+                //    // This list of 'States' will populate in <autocompleteorgstate> in our view.
 
-                });
+                //});
+                // You can use static data as
+                $scope.States = [{
+                    "StateId": 1,
+                    "StateName": "Alabama"
+                },
+         {
+             "StateId": 2,
+             "StateName": "Alaska"
+         },
+         {
+             "StateId": 3,
+             "StateName": "California"
+         },
+          {
+              "StateId": 1,
+              "StateName": "Colorado"
+          },
+         {
+             "StateId": 2,
+             "StateName": "Delaware"
+         },
+         {
+             "StateId": 3,
+             "StateName": "Florida"
+         },
+         {
+             "StateId": 1,
+             "StateName": "Georgia"
+         },
+         {
+             "StateId": 2,
+             "StateName": "Hawaii"
+         },
+         {
+             "StateId": 3,
+             "StateName": "Missouri"
+         }];
             }
 
             // Function to show the selected values in console.
