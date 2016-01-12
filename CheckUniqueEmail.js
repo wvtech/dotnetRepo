@@ -10,6 +10,7 @@ App.directive('uniqueEmail', function ($http, GetURL_Services) {
                     "User_EmailId": element.val()
                 }
                 var custUrl = GetURL_Services.api_Url();
+                // You can also provide a hard coded API url.
                 $http({
                     method: "Post",
                     url: custUrl + '/api/Organization/CheckUniqueEmailAddress/',
