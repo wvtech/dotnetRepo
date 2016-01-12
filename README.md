@@ -35,6 +35,7 @@ Provide code examples and explanations of how to get the project.
  
  Note : Along With User Mangement Module in separate folder we also added Angular directive for unique UserName and EmailAddress ,
         And two autocomplete js files for autocomplete City and autocomplete States which bind the selected City/State with their 
-        Ids to store it in database as reference.
+        Ids to store it in database as reference.You can see demo of all these directives and autocomplte js in our module's 'User
+        Registration' part.(For this we will also provide database script to create the required tables,procedures & functions in             your existing database.)
 
  
