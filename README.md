@@ -33,6 +33,8 @@ Provide code examples and explanations of how to get the project.
 ## API Reference
  (Comming Soon)
  
- 
+ Note : Along With User Mangement Module in separate folder we also added Angular directive for unique UserName and EmailAddress ,
+        And two autocomplete js files for autocomplete City and autocomplete States which bind the selected City/State with their 
+        Ids to store it in database as reference.
 
  
