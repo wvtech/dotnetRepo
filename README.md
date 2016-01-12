@@ -23,15 +23,15 @@ As User Management module is required in every type of projects, we have prepair
 embed our code in his project and continue with further requirements.
 
 ## Usage with demo application:
- Can see full video of this module and understand how to access and use it.Follow the link (http://192.168.0.22:8523/)
+ Can see full video of this module and understand how to access and use it.Follow the link (Comming Soon)
  
 ## Download Complete Code with Restfull APIs.
- Can download our complete code along with APIs from link ().
+ Can download our complete code along with APIs from link (Comming Soon).
 
 Provide code examples and explanations of how to get the project.
 
 ## API Reference
-http://192.168.0.22:6542/
+ (Comming Soon)
  
  
 
