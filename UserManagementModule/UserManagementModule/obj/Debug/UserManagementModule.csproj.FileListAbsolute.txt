@@ -17,6 +17,5 @@ D:\UserManagementModule\UserManagementModule\bin\System.Web.Razor.xml
 D:\UserManagementModule\UserManagementModule\bin\System.Web.WebPages.xml
 D:\UserManagementModule\UserManagementModule\bin\System.Web.WebPages.Deployment.xml
 D:\UserManagementModule\UserManagementModule\bin\System.Web.WebPages.Razor.xml
-D:\UserManagementModule\UserManagementModule\obj\Debug\UserManagementModule.csprojResolveAssemblyReference.cache
 D:\UserManagementModule\UserManagementModule\obj\Debug\UserManagementModule.dll
 D:\UserManagementModule\UserManagementModule\obj\Debug\UserManagementModule.pdb

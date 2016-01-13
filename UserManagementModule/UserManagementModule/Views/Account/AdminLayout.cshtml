@@ -9,10 +9,10 @@
         <li ng-class="{'active':$state.includes('App')}">
             <a ui-sref="App.ManageProfile">Manage Profile</a>
         </li>
-        <li ng-class="{'active':$state.includes('App')}" >
+        <li ng-class="{'active':$state.includes('App')}" data-ng-show="access.UserManagement">
             <a ui-sref="App.ManageUsers">Manage Users</a>
         </li>
-        
+       
       </ul>
   
   

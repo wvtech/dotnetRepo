@@ -31,7 +31,19 @@
            url: '/App',
            templateUrl: '/Account/AdminLayout',
            controller: "AdminLayoutCtrl",
-       }).state('App.ManageProfile', {
+       }).state('App.Company', {
+           url: '/Company',
+           templateUrl: 'Company/companyform',
+           controller: "CompanyCtrl",
+       }).state('App.Property', {
+           url: '/{{CompanyId}}/Property',
+           templateUrl: '/Property/propertyform',
+           controller: "PropertyCtrl",
+       }).state('App.Propertylevel', {
+           url: '/{{PropertyId}}/Propertylevel',
+               templateUrl: '/Property/Propertylevel',
+               controller: "Propertylevel",
+           }).state('App.ManageProfile', {
            url: '{{UserId}}/ManageProfile',
            templateUrl: '/HtmlTemplates/ManageProfile.html',
            controller: "Registration",

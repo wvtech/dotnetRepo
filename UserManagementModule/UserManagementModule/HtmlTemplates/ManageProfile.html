@@ -29,16 +29,16 @@
 
                          <div class="form-group topGap-25">
                              <span class="control-label">Organization State</span>
-                             <div class="main">
-                                 <autocompleteorgstate ng-model="CurrentUser.OrgState" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading" name="State" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates" required></autocompleteorgstate>
+                             <div class="main" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading ">
+                                 <autocompleteorgstate ng-model="CurrentUser.OrgState" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading " name="State" attr-placeholder="type to search States..." click-activation="true" data="States" on-type="updateStates" required></autocompleteorgstate>
                              </div>
                              <span style="color:red" ng-show="UpdateUser.State.$dirty && UpdateUser.State.$invalid">State is required.</span>                              
                          </div>
 
                          <div class="form-group topGap-25">
-                             <span class="control-label">Organization City</span>
+                             <span class="control-label" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading ">Organization City</span>
                              <div class="main">
-                                 <autocompleteorgcity ng-model="CurrentUser.OrgCity" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading" name="City" attr-placeholder="type to search Cities..." click-activation="true" data="cities" on-type="updateCities" required></autocompleteorgcity>
+                                 <autocompleteorgcity ng-model="CurrentUser.OrgCity" ng-disabled="CurrentUser.RegisteredAs=='Individual' || loading " name="City" attr-placeholder="type to search Cities..." click-activation="true" data="cities" on-type="updateCities" required></autocompleteorgcity>
                                
                                </div>
                              <span style="color:red" ng-show="UpdateUser.City.$dirty && UpdateUser.City.$invalid">City is required.</span>

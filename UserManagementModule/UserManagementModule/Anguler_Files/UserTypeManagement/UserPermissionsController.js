@@ -23,86 +23,53 @@
 
         $scope.GetRoleByOrgId = function () {
 
-            //var Org_Id = $scope.CurrentUser.OrgId;
-            //var data = { "Id": Org_Id, "RoleName": "" };
-            //$scope.newRole = RoleService.GetRoleByOrgId(data);
-            //$scope.newRole.then(function (data) {
-            //    for (var i = 0; i < data.data.length; i++) {
-            //        if (data.data[i].CreatedByOrg_Id != 58) {
-            //            $scope.OrganizationRoles = true;
-            //        }
-            //    }
-            //    $scope.Roles = data.data;
-            //});
-            $scope.Roles = [{
-                "RoleId": 1,
-                "RoleName": "Admin"
-            },
-     {
-         "RoleId": 2,
-         "RoleName": "Manager"
-     },
-     {
-         "RoleId": 3,
-         "RoleName": "Employee"
-     }];
-
+            var Org_Id = $scope.CurrentUser.OrgId;
+            var data = { "Id": Org_Id, "RoleName": "" };
+            $scope.newRole = RoleService.GetRoleByOrgId(data);
+            $scope.newRole.then(function (data) {
+                for (var i = 0; i < data.data.length; i++) {
+                    if (data.data[i].CreatedByOrg_Id != 58) {
+                        $scope.OrganizationRoles = true;
+                    }
+                }
+                $scope.Roles = data.data;
+            });
         }
 
         $scope.GetRoleByOrgId();
 
         GetAllModuleListByOrgId();
         function GetAllModuleListByOrgId() {
-            //var data = { "Id": $scope.CurrentUser.OrgId };
-            //var responce = ModuleServices.GetAllModuleListByOrgId(data);
-            //responce.then(function (data) {
+            var data = { "Id": $scope.CurrentUser.OrgId };
+            var responce = ModuleServices.GetAllModuleListByOrgId(data);
+            responce.then(function (data) {
 
-            //    $scope.Modules = data.data;
-            //    console.log($scope.Modules, '$scope.Modules');
-            //}, function (error) {
+                $scope.Modules = data.data;
+                console.log($scope.Modules, '$scope.Modules');
+            }, function (error) {
 
-            //});
-
-            $scope.Modules = [{ "ModuleId": 1, "ModuleName": "User Management" },
-                             { "ModuleId": 1, "ModuleName": "Property Level" },
-                             { "ModuleId": 1, "ModuleName": "Company Level" },
-                             { "ModuleId": 1, "ModuleName": "Work Order" },
-                             { "ModuleId": 1, "ModuleName": "Tally Marketing" },
-                             { "ModuleId": 1, "ModuleName": "Capital Project" }
-            ];
+            });
+            
         }
 
 
         $scope.GetUsersByOrgIdAndRoleId = function () {
 
             var RoleId = 0; var OrgId = 0;
-            //if ($scope.roleid)
-            //    //RoleId = $scope.roleid;
-            //{ RoleId = $scope.roleid.RoleId; OrgId = $scope.roleid.CreatedByOrg_Id; }
-            //var data = { "RoleId": RoleId, "OrgId": OrgId }
-            //var responce = RoleService.GetUsersByOrgIdAndRoleId(data);
-            //responce.then(function (data) {
-            //    $scope.GetRoles = true;
-            //    $scope.UsersInRole = data.data;
-            //    $scope.GetPermissionsByUserRoleOrUserId();
-            //    console.log($scope.UsersInRole, '$scope.UsersInRole');
-            //}, function (error) {
+            if ($scope.roleid)
+                //RoleId = $scope.roleid;
+            { RoleId = $scope.roleid.RoleId; OrgId = $scope.roleid.CreatedByOrg_Id; }
+            var data = { "RoleId": RoleId, "OrgId": OrgId }
+            var responce = RoleService.GetUsersByOrgIdAndRoleId(data);
+            responce.then(function (data) {
+                $scope.GetRoles = true;
+                $scope.UsersInRole = data.data;
+                $scope.GetPermissionsByUserRoleOrUserId();
+                console.log($scope.UsersInRole, '$scope.UsersInRole');
+            }, function (error) {
 
-            //});
+            });
 
-            $scope.GetRoles = true;
-
-            if ($scope.roleid.RoleId == 1)
-                $scope.UsersInRole = [{ "UserId": 86, "EmailId": "john@gmal.com" },
-                                      { "UserId": 89, "EmailId": "jacks@gmal.com" }];
-
-            else if ($scope.roleid.RoleId == 2)
-                $scope.UsersInRole = [{ "UserId": 86, "EmailId": "bob@gmal.com" }
-                ];
-
-            else if ($scope.roleid.RoleId == 3)
-                $scope.UsersInRole = [{ "UserId": 86, "EmailId": "marry@gmal.com" }
-                ];
         }
 
         $scope.GetPermissionsByUserRoleOrUserId = function () {
@@ -118,7 +85,6 @@
             var responce = UserPermissionsServices.GetPermissionsByUserRoleOrUserId(data);
             responce.then(function (data) {
                 console.log(data.data, '$scope.Permissions');
-                
                 $scope.SelectAll = false;
                 $scope.SelectAllAdd = false;
                 $scope.SelectAllEdit = false;
@@ -141,17 +107,8 @@
                     $scope.FINALIZE[$scope.Modules[i].ModuleId] = false;
                 }
 
-                // $scope.Permissions = data.data;
-                // Get Permissions by database or Give Static permissions as
+                $scope.Permissions = data.data;
 
-                $scope.Permissions =
-               [{ "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 1, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false },
-                { "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 2, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false },
-                { "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 3, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false },
-                { "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 4, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false },
-                { "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 5, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false },
-                { "Add": true, "All": false, "CapitalProject": false, "CompanyLevel": false, "Delete": false, "Edit": true, "Finalize": false, "ModuleId": 6, "Print": false, "PropertyLevel": false, "ReActivate": true, "TallyMarketing": false, "UserManagement": false, "View": true, "WorkOrder": false }
-              ];
                 for (var j = 0; j < $scope.Permissions.length; j++) {
 
                     if ($scope.Permissions[j].ModuleId > 0) {
@@ -212,7 +169,7 @@
                     }
                 }
 
-
+               
             }, function (error) {
 
             });
@@ -252,12 +209,13 @@
 
         }
 
-        $scope.SetAllModulesAtEnd = function () {
-            for (var i = 0; i < $scope.Modules.length; i++) {
+        $scope.SetAllModulesAtEnd=function()
+        {
+            for (var i = 0; i < $scope.Modules.length; i++) {                
 
                 if ($scope.ADD[$scope.Modules[i].ModuleId] && $scope.EDIT[$scope.Modules[i].ModuleId] && $scope.DELETE[$scope.Modules[i].ModuleId] && $scope.VIEW[$scope.Modules[i].ModuleId] && $scope.REACTIVE[$scope.Modules[i].ModuleId] && $scope.PRINT[$scope.Modules[i].ModuleId] && $scope.PRINT[$scope.Modules[i].ModuleId])
-
-                    $scope.AllModules[$scope.Modules[i].ModuleId] = true;
+               
+                 $scope.AllModules[$scope.Modules[i].ModuleId] = true;
             }
             $scope.SetAllAtEnd();
         }
@@ -472,7 +430,7 @@
             if ($scope.SelectAllAdd) {
                 $scope.SelectAllView = true;
                 for (var i = 0; i < $scope.Modules.length; i++) {
-                    // alert($scope.Modules[i].ModuleId + '$scope.Modules[i].ModuleId');
+                   // alert($scope.Modules[i].ModuleId + '$scope.Modules[i].ModuleId');
                     $scope.All[$scope.Modules[i].ModuleId] = true;
                     $scope.ADD[$scope.Modules[i].ModuleId] = true;
                     $scope.VIEW[$scope.Modules[i].ModuleId] = true;
@@ -486,8 +444,7 @@
                     $scope.ADD[$scope.Modules[i].ModuleId] = false;
                     $scope.AllModules[$scope.Modules[i].ModuleId] = false;
                     if (!$scope.VIEW[$scope.Modules[i].ModuleId] && !$scope.EDIT[$scope.Modules[i].ModuleId] && !$scope.DELETE[$scope.Modules[i].ModuleId] && !$scope.REACTIVE[$scope.Modules[i].ModuleId] && !$scope.PRINT[$scope.Modules[i].ModuleId] && !$scope.FINALIZE[$scope.Modules[i].ModuleId]) {
-                        $scope.All[$scope.Modules[i].ModuleId] = false;
-
+                        $scope.All[$scope.Modules[i].ModuleId] = false;                       
                     }
                 }
             }
@@ -537,7 +494,7 @@
                     $scope.AllModules[$scope.Modules[i].ModuleId] = false;
                     if (!$scope.VIEW[$scope.Modules[i].ModuleId] && !$scope.ADD[$scope.Modules[i].ModuleId] && !$scope.EDIT[$scope.Modules[i].ModuleId] && !$scope.REACTIVE[$scope.Modules[i].ModuleId] && !$scope.PRINT[$scope.Modules[i].ModuleId] && !$scope.FINALIZE[$scope.Modules[i].ModuleId]) {
                         $scope.All[$scope.Modules[i].ModuleId] = false;
-                      
+                        
                     }
                 }
             }
@@ -575,7 +532,7 @@
                     $scope.PRINT[$scope.Modules[i].ModuleId] = false;
                     $scope.FINALIZE[$scope.Modules[i].ModuleId] = false;
                 }
-
+               
             }
         }
 
@@ -623,7 +580,7 @@
                     $scope.AllModules[$scope.Modules[i].ModuleId] = false;
                     if (!$scope.VIEW[$scope.Modules[i].ModuleId] && !$scope.ADD[$scope.Modules[i].ModuleId] && !$scope.EDIT[$scope.Modules[i].ModuleId] && !$scope.DELETE[$scope.Modules[i].ModuleId] && !$scope.REACTIVE[$scope.Modules[i].ModuleId] && !$scope.FINALIZE[$scope.Modules[i].ModuleId]) {
                         $scope.All[$scope.Modules[i].ModuleId] = false;
-                       
+                     
                     }
                 }
             }
@@ -690,7 +647,8 @@
                     })
                 }
             }
-            else {
+            else
+            {
                 swal('Oops...', "You have not selected any UserType.\n Please select UserType first.", 'error');
             }
         }

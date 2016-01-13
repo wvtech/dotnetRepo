@@ -12,5 +12,14 @@
         return request;
     }
     
-   
+    //this.GetAgreementTypeList_Sp = function (Org_Id) {
+
+    //    var request = $http({
+    //        method: 'Get',
+    //        url: custurl + '/api/BAA/GetAgreementTypeList_Sp?Org_Id=' + Org_Id
+    //    });
+    //    return request;
+
+    //}
+
 })

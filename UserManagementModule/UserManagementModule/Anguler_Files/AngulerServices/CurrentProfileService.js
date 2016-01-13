@@ -7,8 +7,8 @@
 
     this.SetCurrentProfile=function(UserInfo)
     {
-        console.log(UserInfo,'userinfo');
-        return localStorageService.set('CurrentProfile', UserInfo);
+        console.log(UserInfo[0],'userinfo');
+        return localStorageService.set('CurrentProfile', UserInfo[0]);
     }
 
     this.logout = function ()

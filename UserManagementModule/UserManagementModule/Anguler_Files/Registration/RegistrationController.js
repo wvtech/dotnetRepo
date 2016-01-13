@@ -138,72 +138,31 @@
 
         $scope.updateCities = function (typed) {
           
-            //var data = { "CityName": typed };
-            //$scope.newCity = CityService.AutoCompleteCity(data);
-            //$scope.newCity.then(function (data) {               
-            //    $scope.cities = data.data;    
-            //});
-            // You can get your cities dynamically using api call or Give Cities as :
-            $scope.cities = [{
-                "CityId": 1,
-                "CityName": "Indore"
-            },
-            {
-                "CityId": 2,
-                "CityName": "Bhopal"
-            },
-            {
-                "CityId":3,
-                "CityName": "Ujjain"
-            }];
-
+            var data = { "CityName": typed };
+            $scope.newCity = CityService.AutoCompleteCity(data);
+            $scope.newCity.then(function (data) {               
+                $scope.cities = data.data;    
+            });
         }
 
         $scope.updateStates = function (typed) {
 
-            //var data = { "StateName": typed };
-            //$scope.newState = StateService.AutoCompleteState(data);
-            //$scope.newState.then(function (data) {                
-            //    $scope.States = data.data;
+            var data = { "StateName": typed };
+            $scope.newState = StateService.AutoCompleteState(data);
+            $scope.newState.then(function (data) {                
+                $scope.States = data.data;
                 
-            //});
-
-            $scope.States = [{
-                "StateId": 1,
-                "StateName": "M.P."
-            },
-           {
-               "StateId": 2,
-               "StateName": "U.P."
-           },
-           {
-               "StateId": 3,
-               "StateName": "C.G."
-           }];
+            });
         }
      
         $scope.updateUserRoles = function (typed) {
            
-            //var data = { "Id": $scope.CurrentUser.OrgId, "RoleName": typed };            
-            //$scope.newRole = RoleService.GetRoleByOrgId(data);
-            //$scope.newRole.then(function (data) {
-            //    $scope.Roles = data.data;
+            var data = { "Id": $scope.CurrentUser.OrgId, "RoleName": typed };            
+            $scope.newRole = RoleService.GetRoleByOrgId(data);
+            $scope.newRole.then(function (data) {
+                $scope.Roles = data.data;
                
-            //});
-
-            $scope.Roles = [{
-                "RoleId": 1,
-                "RoleName": "Admin"
-            },
-          {
-              "RoleId": 2,
-              "RoleName": "Manager"
-          },
-          {
-              "RoleId": 3,
-              "RoleName": "Employee"
-          }];
-
+            });
         }
 
     }
