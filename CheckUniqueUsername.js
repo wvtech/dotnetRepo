@@ -9,6 +9,7 @@
                     "User_UserName": element.val()
                 }
                 var custUrl = GetURL_Services.api_Url();
+                // You can also provide hard coded APi url.
                 $http({
                     method: "Post",
                     url: custUrl + '/api/Organization/CheckUniqueUserName/',
