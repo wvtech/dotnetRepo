@@ -1,4 +1,4 @@
-# dotnetRepo
+
 ## Complete User Management Module in Pure AngularJS
 
 This User Mangement Module is written in pure AngularJS and uses Restfull API calls for getting the data and perform all CRUD operations.
@@ -24,6 +24,9 @@ embed our code in his project and continue with further requirements.
 
 ## Usage with demo application:
  Can see full usage of this module and understand how to access and use it.Follow the link (http://103.231.44.154:9999/)
+ (First Register yourself as an Organization then login in the module and then perform different operations as Add Users
+ in your Organization , Edit Your Profile , Manage Your User's profile , Set Permissions For Users , Active Or InActive
+ Users in your organization.)
  
 ## Download Complete Code with RESTfull APIs.
  Can download our complete code along with APIs from link (https://github.com/wvtech/AngularModules).
