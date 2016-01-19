@@ -23,15 +23,14 @@ As User Management module is required in every type of projects, we have prepair
 embed our code in his project and continue with further requirements.
 
 ## Usage with demo application:
- Can see full video of this module and understand how to access and use it.Follow the link (Comming Soon)
+ Can see full usage of this module and understand how to access and use it.Follow the link (http://103.231.44.154:9999/)
  
-## Download Complete Code with Restfull APIs.
- Can download our complete code along with APIs from link (Comming Soon).
+## Download Complete Code with RESTfull APIs.
+ Can download our complete code along with APIs from link (https://github.com/wvtech/AngularModules).
 
-Provide code examples and explanations of how to get the project.
 
 ## API Reference
- (Comming Soon)
+ (http://103.231.44.154:6542/)
  
  Note : Along With User Mangement Module in separate folder we also added Angular directive for unique UserName and EmailAddress ,
         And two autocomplete js files for autocomplete City and autocomplete States which bind the selected City/State with their 
